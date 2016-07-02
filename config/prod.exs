@@ -13,9 +13,10 @@ use Mix.Config
 # which you typically run after static files are built.
 config :peepchat, Peepchat.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [host: "example.com", port: 80],
-  secret_key_base: System.get_env("SECRET_KEY_BASE"),
-  cache_static_manifest: "priv/static/manifest.json"
+  force_ssl: [rewrite_on: [:x_forwarded_proto]],
+  url: [host: "friendly-crown-31625.herokuapp.com", port: 443],
+  secret_key_base: System.get_env("SECRET_KEY_BASE")
+  # cache_static_manifest: "priv/static/manifest.json"
 
 config :peepchat, Peepchat.Repo,
   adapter: Ecto.Adapters.Postgres,
@@ -68,4 +69,4 @@ config :logger, level: :info
 
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
-import_config "prod.secret.exs"
+# import_config "prod.secret.exs"
