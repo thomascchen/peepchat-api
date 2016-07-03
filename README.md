@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/thomascchen/peepchat-api.svg?branch=master)](https://travis-ci.org/thomascchen/peepchat-api)
+
 # Peepchat
 
 To start your Phoenix app:
